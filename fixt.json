@@ -1,0 +1,34 @@
+[
+{
+  "model": "catalog.category",
+  "pk": 1,
+  "fields": {
+    "name": "от ежа",
+    "description": "от ежа ежам ежовое"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 2,
+  "fields": {
+    "name": "шнурки пляжные",
+    "description": "современные модные купальные костюмы ультра-бикини"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 3,
+  "fields": {
+    "name": "доброе утро",
+    "description": "уведомляторы о зарплате, празднике, внеплановом выходном"
+  }
+},
+{
+  "model": "catalog.category",
+  "pk": 4,
+  "fields": {
+    "name": "набор педофила",
+    "description": "чупачупсы и презервативы"
+  }
+}
+]
