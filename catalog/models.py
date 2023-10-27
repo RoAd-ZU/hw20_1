@@ -14,7 +14,6 @@ class Product(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='наименование')
     description = models.CharField(max_length=100, verbose_name='описание')
-    # created_at = models.CharField(max_length=50, verbose_name='будет отменено', **NULLABLE)
 
 class Meta:
     ordering = ('name',)
