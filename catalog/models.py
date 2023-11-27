@@ -11,9 +11,18 @@ class Product(models.Model):
     date_cr = models.DateField(verbose_name='дата создания', **NULLABLE)
     date_ch = models.DateField(verbose_name='дата последнего изменения', **NULLABLE)
 
+    def __str__(self):
+        return f'{self.name} | описание: {self.description}\n {self.category}\n {self.price}'
+
+    class Meta:
+        ordering = ('name',)
+
 class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name='наименование')
     description = models.CharField(max_length=100, verbose_name='описание')
 
-class Meta:
-    ordering = ('name',)
+    def __str__(self):
+        return f'{self.name} | описание: {self.description}'
+
+    class Meta:
+        ordering = ('name',)

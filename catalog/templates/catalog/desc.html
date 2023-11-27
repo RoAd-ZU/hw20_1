@@ -1,0 +1,14 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+<title>Описание</title>
+<div class="card-deck mb-3 text-center">
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Наименование - "{{ object_list.name }}"</h4>
+            <h4 class="my-0 font-weight-normal">Описание     - "{{ object_list.description }}"</h4>
+            <h4 class="my-0 font-weight-normal">Категория    - "{{ object_list.category }}"</h4>
+            <h4 class="my-0 font-weight-normal">Цена         - "{{ object_list.price }}"</h4>
+        </div>
+    </div>
+</div>
+{% endblock %}
