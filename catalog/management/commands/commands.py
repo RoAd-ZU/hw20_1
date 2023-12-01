@@ -18,10 +18,10 @@ class Command(BaseCommand):
         finally:
             conn.close()
         products_list = [
-            {'name':'змея', 'description':'ужужужужуж', 'image':'media/Snake.jpg', 'category':'от ежа', 'price':100, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'},
-            {'name':'чупачупс', 'description':'погрызен, упакован', 'image':'media/Chupa.jpg', 'category':'набор педофила', 'price':45, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'},
-            {'name':'плавки-невидимки', 'description':'свобода движений и ветер щекочет', 'image':'media/Hmm.jpg', 'category':'шнурки пляжные', 'price':12000, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'},
-            {'name':'электромолоток подвесной (чугунный)', 'description':'доп.комплектация к будильнику "Последний рассвет"', 'image':'media/Hummer.jpg', 'category':'доброе утро', 'price':2100, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'}
+            {'name':'змея', 'description':'ужужужужуж', 'image':'Snake.jpg', 'category':'от ежа', 'price':100, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'},
+            {'name':'чупачупс', 'description':'погрызен, упакован', 'image':'Chupa.jpg', 'category':'набор педофила', 'price':45, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'},
+            {'name':'плавки-невидимки', 'description':'свобода движений и ветер щекочет', 'image':'Hmm.jpg', 'category':'шнурки пляжные', 'price':12000, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'},
+            {'name':'электромолоток подвесной (чугунный)', 'description':'доп.комплектация к будильнику "Последний рассвет"', 'image':'Hummer.jpg', 'category':'доброе утро', 'price':2100, 'date_cr':'1555-12-12', 'date_ch':'1555-12-12'}
         ]
 
         Category.objects.all().delete()
