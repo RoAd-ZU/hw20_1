@@ -1,0 +1,25 @@
+{% extends 'catalog/base.html' %}
+{% load custom_tags %}
+{% block content %}
+
+    <div class="col-12 mb-5">
+        <a class="btn btn-outline-primary" href="{% url 'blog:create' %}">Написать отзыв</a>
+    </div>
+    <div class="row">
+        {% for object in object_list%}
+        <div class="col-md-4 card-deck mb-2 text-center">
+            <div class="card mb-3 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">{{ object.title }}</h4>
+                    <a href="{% url 'blog:update' object.pk %}" class="btn btn-sm btn-outline-secondary">Редактировать отзыв</a>
+                    <a href="{% url 'blog:desc' object.pk %}" class="btn btn-sm btn-outline-secondary">Открыть отзыв</a>
+                </div>
+                <div class="card-body">
+                    <img class="mb-2" src="{{ object.preview|mediapath }}" alt="" width="400" height="400">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

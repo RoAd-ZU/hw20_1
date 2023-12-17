@@ -1,0 +1,20 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+<title>Описание</title>
+<div class="col-12 mb-5">
+    <a class="btn btn-outline-primary" href="{% url 'blog:create' %}">Написать отзыв</a>
+</div>
+<div class="card-deck mb-3 text-center">
+    <div class="card mb-4 box-shadow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal"> "{{ object.title }}"</h4>
+             <div class="card mb-3 box-shadow">
+                <h4 class="my-0 font-weight-normal"> "{{ object.content }}"</h4>
+                <h4 class="my-0 font-weight-normal"> {{ object.slug }}
+             </div>
+            <h4 class="my-0 font-weight-normal"> Просмотры: {{ object.views_counter }}</h4>
+            <img class="mb-2" src="{{ object.preview }}" alt="">
+        </div>
+    </div>
+</div>
+{% endblock %}
