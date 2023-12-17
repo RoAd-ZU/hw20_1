@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from pytils.translit import slugify
 
@@ -24,7 +24,9 @@ class BlogCreateView(CreateView):
 class BlogUpdateView(UpdateView):
     model = Blog
     fields = ('title', 'content', 'preview')
-    success_url = reverse_lazy('blog:data')
+
+    def get_success_url(self):
+        return reverse('blog:desc', args=[self.object.pk])
 
 
 class DataListView(ListView):

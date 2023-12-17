@@ -9,5 +9,5 @@ urlpatterns = [
     path('', DataListView.as_view(), name='data'),
     path('blog/', BlogCreateView.as_view(), name='create'),
     path('desc/<int:pk>', DescriptionDetailView.as_view(), name='desc'),
-    path('update/<int:pk>', BlogUpdateView.as_view(), name='update')
+    path('update/<int:pk>/', BlogUpdateView.as_view(), name='update')
 ]
